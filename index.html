@@ -1,17 +1,55 @@
 <html>
     <head>
+        <meta charset="utf-8" />
     </head>
     <body>
-	
-	    <input id='studentID'>
-		<button id='submit'>submit</button>
-		<h1 id='return'></h1>
-		<div style='margin-top:50px;'>
-			<img id='loadingIMG' style='display:none;' src='http://sierrafire.cr.usgs.gov/images/loading.gif'>
-		</div>
+        <style type="text/css">
+            #bg{
+             width:100vw;
+             height:100vh;
+             text-align:center;
+            }
+            
+            #topic{
+             width:300px;
+             height:60px;
+             background-color:#93e3d1;
+             text-align:center;
+             line-height:20px;
+             border:3px #72819d dashed;
+             margin:0px auto;
+            }
+            #name{
+            display:none;
+            }
+        </style>
+        
+        <div id="bg">
+           <div class="topic" id="topic">
+               <p id="first">燈愣</p>
+           </div>
+           <div id="name">
+               你是
+               <input type="text" id="keyname" value="輸入名字">
+               <button id="enter" type="button">確定</button>
+           </div>
+          
+        </div>
+	 
+
 		
 		
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="js/jcookie/jquery.cookie.js"></script>
+		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+        <script>
+            
+           $("#topic").click(function(){
+              $("#first").html("我是史蕓瑄，你呢?");
+              $("#name").show();
+            });  
+            $("#enter").click(function(){
+              alert("嗨囉 "+$("#keyname").val()+" 很高興認識你XDDDD")
+            }); 
+           
+        </script>
     </body>
 </html>
